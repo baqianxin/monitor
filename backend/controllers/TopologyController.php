@@ -9,6 +9,7 @@
 namespace backend\controllers;
 
 
+use backend\models\Zabbix;
 use yii\web\Controller;
 
 class TopologyController extends Controller
@@ -42,7 +43,15 @@ class TopologyController extends Controller
      */
     public function actionHardware()
     {
-        return  $this->render('hardware');
+        $zabbix = new Zabbix();
+        $graphs = $zabbix->getZabbix()->graphGet();
+        // get all graphs named "CPU"
+        $cpuGraphs = $zabbix->getZabbix()->graphGet(array(
+            'output' => 'extend',
+            'search' => array('name' => 'CPU')
+        ));
+
+        return $this->render('hardware', ['graphs' => $graphs, 'cpuGraphs' => $cpuGraphs]);
     }
 
     /**

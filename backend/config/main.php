@@ -46,6 +46,13 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'assetManager' => [
+            'bundles' => [
+                'dmstr\web\AdminLteAsset' => [
+                    'skin' => 'skin-purple',
+                ],
+            ],
+        ],
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
             'defaultRoles' => ['guest'],

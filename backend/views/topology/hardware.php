@@ -46,4 +46,22 @@ $this->title = '硬件结构图';
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <?php
+            foreach ($graphs as $graph)
+                echo $graph->graphid . "\n";
+            ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <?php
+            foreach ($cpuGraphs as $graph)
+                printf("id:%d name:%s\n", $graph->graphid, $graph->name);
+            ?>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+
 </div>

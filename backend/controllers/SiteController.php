@@ -1,6 +1,8 @@
 <?php
+
 namespace backend\controllers;
 
+use backend\models\Zabbix;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -60,7 +62,21 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $zabbix = new Zabbix();
+        $params = [
+            "output" =>'extend',
+            "filter" => [
+                "host" => [
+
+                ]
+            ],
+            "selectInterfaces" => 'extend'
+        ];
+        $hosts = $zabbix->getZabbix()->hostGet($params);
+
+        $users = $zabbix->getZabbix()->userGet(["output" => "extend"]);
+
+        return $this->render('index', ['hosts' => $hosts, 'users' => $users]);
     }
 
     /**

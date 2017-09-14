@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e8ccb93a05b70dca28b1f3b381518bf",
+    "content-hash": "8fd742f16ed9d5eb7381e3cea01a9a28",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -349,6 +349,49 @@
                 "yii"
             ],
             "time": "2013-12-10T17:49:58+00:00"
+        },
+        {
+            "name": "confirm-it-solutions/php-zabbix-api",
+            "version": "v2.4.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/confirm/PhpZabbixApi.git",
+                "reference": "820f635e0c3e4dee418145ad0ba9ef506747757e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/confirm/PhpZabbixApi/820f635e0c3e4dee418145ad0ba9ef506747757e.zip",
+                "reference": "820f635e0c3e4dee418145ad0ba9ef506747757e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "build/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dominique Barton",
+                    "email": "dbarton@confirm.ch",
+                    "homepage": "http://www.confirm.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PhpZabbixApi library",
+            "homepage": "http://github.com/confirm-it-solutions/PhpZabbixApi",
+            "keywords": [
+                "api",
+                "zabbix"
+            ],
+            "time": "2016-05-12T11:40:53+00:00"
         },
         {
             "name": "dmstr/yii2-adminlte-asset",

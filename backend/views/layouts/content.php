@@ -9,16 +9,12 @@ use dmstr\widgets\Alert;
         <?php if (isset($this->blocks['content-header'])) { ?>
             <h1><?= $this->blocks['content-header'] ?></h1>
         <?php } else { ?>
-                <a href="dashboard" class="addtabsit"><i class="fa fa-dashboard"></i> 控制台</a>
+                <a href="/" class="addtabsit"><i class="fa fa-dashboard"></i> 控制台</a>
                 <?php
-                //                if ($this->title !== null) {
-                //                    echo \yii\helpers\Html::encode($this->title);
-                //                } else {
-                //                    echo \yii\helpers\Inflector::camel2words(
-                //                        \yii\helpers\Inflector::id2camel($this->context->module->id)
-                //                    );
-                //                    echo ($this->context->module->id !== \Yii::$app->id) ? '<small>Module</small>' : '';
-                //                }
+                    \yii\helpers\Inflector::camel2words(
+                        \yii\helpers\Inflector::id2camel($this->context->module->id)
+                    );
+//                    ($this->context->module->id !== \Yii::$app->id) ? '<small>Module</small>' : '';
                 ?>
         <?php } ?>
 
